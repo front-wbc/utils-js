@@ -1,0 +1,40 @@
+{
+  "name": "utils-marketing-js",
+  "version": "1.0.0",
+  "description": "une classe singleton qui contient des methodes utilitaires pour des projets marketing surtout",
+  "main": "utils.js",
+  "scripts": {
+    "test": "utils-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/front-wbc/utils-js.git"
+  },
+  "keywords": [
+    "utils",
+    "js",
+    "utils-js",
+    "utilsjs",
+    "wbc",
+    "marketing",
+    "singleton",
+    "es6"
+  ],
+  "author": "Said Bensamdi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/front-wbc/utils-js/issues"
+  },
+  "homepage": "https://github.com/front-wbc/utils-js#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-es2015": "^6.18.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jsdoc": "^2.1.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}

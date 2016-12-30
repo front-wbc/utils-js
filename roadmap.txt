@@ -1,0 +1,14 @@
+- structure de l'objet
+- l'option debug
+- les fonction utilitaires comme is_String, ....
+- des fonctions pour les plugins come ( carousel, datepicker, slider );
+- gestion des events d'une façon aisée
+- gestion des erreurs
+- documentation
+- lien CDN
+- un surcouche pour tweenmax ( par attr-html ou js )
+- validation form avec les message d'erreurs
+- input file display
+- Ajax ou Http
+- templating simple ou handlerbars
+- compte github dédie

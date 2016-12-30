@@ -187,8 +187,12 @@ class Utils {
 			}
 		}
 	}
+	/**
+	 * une fonction qui afficher la structure de la classe Utils
+	 * @help
+	 */
 	help() {
-		this.log("la liste des methodes ")
+		this.log("la liste des methodes ");
 	}
 
 } // class Utils

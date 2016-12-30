@@ -207,16 +207,25 @@ var Utils = function () {
 							altFormat: "d/m/Y"
 						};
 						break;
-
 				}
+				$(selector).flatpickr(options_defaults);
+			} else {
 				if (typeof callback !== "undefined") {
 					callback.call(this, selector, type);
 				} else {
-					$(selector).flatpickr(options_defaults);
+					this.log("Merci d'include le fichier flatpickr.js sur votre page, voici le lien : https://chmln.github.io/flatpickr/", "error");
 				}
-			} else {
-				this.log("Merci d'include le fichier flatpickr.js sur votre page, voici le lien : https://chmln.github.io/flatpickr/", "error");
 			}
+		}
+		/**
+   * une fonction qui afficher la structure de la classe Utils
+   * @help
+   */
+
+	}, {
+		key: 'help',
+		value: function help() {
+			this.log("la liste des methodes ");
 		}
 	}]);
 

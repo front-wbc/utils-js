@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 	    },
 	    dist: {
 	      files: {
-	        "dist/utils.js": "src/utils.js"
+	        "src/utils-babel.js": "src/utils.js"
 	      }
 	    }
 	}, 
@@ -28,18 +28,28 @@ module.exports = function(grunt) {
             }
         }
     },
-	  watch: {
-		  scripts: {
-		    files: ['src/*.js'],
-		    tasks: ['jshint', 'babel'],
-		    options: {
-		      spawn: false,
-		    },
-		 },
-	},
+	uglify: {
+	    options: {
+	      mangle: false
+	    },
+	    my_target: {
+	      files: {
+	        'dist/utils.js': ['src/utils-babel.js']
+	      }
+	    }
+	  },
+    watch: {
+	  scripts: {
+	    files: ['src/*.js'],
+	    tasks: ['jshint', 'jsdoc', 'babel', 'uglify'],
+	    options: {
+	      spawn: false,
+	    }
+	  }
+	}
   });
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['watch'], ['test']);
-  grunt.registerTask('dev', ['jsdoc', 'babel']);
+  grunt.registerTask('dev', ['jsdoc', 'babel', 'uglify']);
 
 };

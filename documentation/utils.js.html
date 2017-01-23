@@ -1,4 +1,32 @@
-let instance = null;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: utils.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: utils.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>let instance = null;
 class Utils {
 	/**
 	 * Constructor de la classe singleton Utils
@@ -117,7 +145,7 @@ class Utils {
 	 * @param {String} email - la valeur à vérifier.
 	 */
 	is_email(email) {
-		let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		let re = /^(([^&lt;>()\[\]\\.,;:\s@"]+(\.[^&lt;>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		var test = re.test(email);
 		if( test ) {
 			return {
@@ -196,7 +224,7 @@ class Utils {
 	 */
 	forEach(array, callback) {
 		if (this.is_array(array)) {
-			for (var index = 0; index < array.length; index++) {
+			for (var index = 0; index &lt; array.length; index++) {
 				var item = array[index];
 				callback.call(this, item, index);
 			}
@@ -232,7 +260,7 @@ class Utils {
 				    pagination : false,
 				    singleItem : true,
 				    stopOnHover : true,
-				    navigationText : ['<img src="'+self.staticRoot+'images/btn_right.png" />','<img src="'+self.staticRoot+'images/btn_left.png" />'],
+				    navigationText : ['&lt;img src="'+self.staticRoot+'images/btn_right.png" />','&lt;img src="'+self.staticRoot+'images/btn_left.png" />'],
 				    mouseDrag : true,
 				    rewindNav : true,
 					items : 1
@@ -322,7 +350,7 @@ class Utils {
 		$(selector).unbind(event);
 		$(selector).bind(event, function(evt) {
 			evt.preventDefault();
-			if( callback !== null && typeof self[callback] !== "undefined" ) {
+			if( callback !== null &amp;&amp; typeof self[callback] !== "undefined" ) {
 				var reg = /^#|^./g;
 				var new_selector_key = selector.trim();
 				if( reg.test(new_selector_key) ) {
@@ -407,12 +435,12 @@ class Utils {
 	validateForm(evt, self, options) {
 		var nbr_input = $(options.parent).find("input[data-require='true']").length;
 		var test_passe = [];
-		for( var i = 0; i < nbr_input; i++ ) {
+		for( var i = 0; i &lt; nbr_input; i++ ) {
 			var input = $(options.parent).find("input[name]").eq(i);
 			var required = $(input).data("require");
 			var rule = $(input).data("rule");
 			var value = $(input).val();
-			if( required === true && typeof required !== "undefined" ) {
+			if( required === true &amp;&amp; typeof required !== "undefined" ) {
 				if( self.is_required(input, "Ce champ est obligatoire") ) {
 					if( typeof rule !== "undefined" ) {
 						var rule_accept = self[rule](value);
@@ -441,7 +469,7 @@ class Utils {
 	convertArrayToObject (data) {
 		if( Array.isArray(data) ) {
 			var object = {};
-			for( var a = 0; a < data.length; a++ ) {
+			for( var a = 0; a &lt; data.length; a++ ) {
 				object[data[a].name] =  data[a].value;
 			}
 			return object;
@@ -458,7 +486,7 @@ class Utils {
 	 */
 	is_required (input, message) {
 		var value = $(input).val();
-		if( value.length > 0 && value !== null && typeof value !== "undefined" ) {
+		if( value.length > 0 &amp;&amp; value !== null &amp;&amp; typeof value !== "undefined" ) {
 			return !this.addErrorInput(input, false);
 		}
 		else {
@@ -479,7 +507,7 @@ class Utils {
 		else {
 			$(input).removeClass("error");
 		}
-		if( this.inputErrorHTML !== null && typeof this.inputErrorHTML !== "undefined" ) {
+		if( this.inputErrorHTML !== null &amp;&amp; typeof this.inputErrorHTML !== "undefined" ) {
 			this.inputErrorHTML.call(this, input, apply, message);
 		}
 		return apply;
@@ -494,7 +522,7 @@ class Utils {
 	inputErrorHTML (input, etat, message) {
 		$(input).parent().find('span.msg_error').remove();
 		if( etat ) {
-			$(input).parent().prepend('<span class="msg_error error">'+message+'</span>');
+			$(input).parent().prepend('&lt;span class="msg_error error">'+message+'&lt;/span>');
 		}
 	}
 	/**
@@ -511,7 +539,7 @@ class Utils {
 		}
 		window.onload = function(){
 			if( typeof window.google === "undefined" ) {
-				this.log('Inclure ce script sur votre page : <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"> </script>', 'error');
+				this.log('Inclure ce script sur votre page : &lt;script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"> &lt;/script>', 'error');
 			}
 			else {
 				var cordonnees_lat_lng = new google.maps.LatLng(coordonnees.lat, coordonnees.lng);
@@ -539,7 +567,7 @@ class Utils {
 				
 				var nbr_markers = self.markers.length;
 				if( nbr_markers > 0 ) {
-					for( var i = 0; i < nbr_markers; i++ ) {
+					for( var i = 0; i &lt; nbr_markers; i++ ) {
 						var marker_data = self.markers[i];
 						var marker = self.createMarker({ coordonnees : self.convertObjetCords(marker_data.coordonnees), title : marker_data.title, icon : marker_data.icon, index : i, id : marker_data.id  });
 					}// boucle for
@@ -589,7 +617,7 @@ class Utils {
 		var self = this;
 		var geocoder = new google.maps.Geocoder();
 		geocoder.geocode({'address': address}, function(results, status) {
-			  if (status === "OK" && typeof callback !== "undefined") {
+			  if (status === "OK" &amp;&amp; typeof callback !== "undefined") {
 				callback.call(self, results[0].geometry.location.toJSON(), results, status);
 			  }
 		});	
@@ -716,7 +744,7 @@ class Utils {
 	ajax(url_ajax, type, data, callback, error_callback) {
 		var self = this;
 		var data_send = "";
-		if(typeof data !== "undefined" && data !== null) {
+		if(typeof data !== "undefined" &amp;&amp; data !== null) {
 			data_send = JSON.stringify(data);
 		}
 		/*if( self.add_in_url.length > 0 ) {
@@ -735,12 +763,12 @@ class Utils {
             processData: false,
 			dataType: 'json',
 			success : function(data) {
-				if( typeof callback  !== "undefined" && callback !== null ) {
+				if( typeof callback  !== "undefined" &amp;&amp; callback !== null ) {
 					callback.call(self, data, this);
 				}
 			},
 			error : function(error, xhr) {
-				if( typeof error_callback  !== "undefined" && error_callback !== null  ) {
+				if( typeof error_callback  !== "undefined" &amp;&amp; error_callback !== null  ) {
 					error_callback.call(self, xhr, error, this);
 				}	
 			}
@@ -756,4 +784,26 @@ class Utils {
 		this.log("la liste des methodes est en cours de création");
 	}
 
-} // class Utils
+} // class Utils</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Utils.html">Utils</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Jan 23 2017 12:54:56 GMT+0000 (Maroc)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

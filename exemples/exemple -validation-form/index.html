@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nom de projet</title>
+		<link rel="stylesheet" media="screen" href="css/utils.css">
+		<link rel="stylesheet" media="screen" href="css/style.css">
+		<link rel="stylesheet" media="screen" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" media="screen" href="css/flatpickr.min.css">
+		<script type="text/javascript" src="libs/jquery.min.js"></script>
+		<script type="text/javascript" src="libs/moment.js"></script>
+		<script type="text/javascript" src="../../dist/utils.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var utils = new Utils({ debug : true });
+				
+				utils.validate("#form", function(data) {
+					// data c'est les donnes des champs de formulaire
+					this.log(data);
+				});
+				
+				
+				
+				
+				
+				
+				
+			});
+			
+			
+		</script>
+		
+    </head>
+    <body>
+		
+		<h1>Form validation</h1>
+		
+		<form id="form">
+    		<p>
+    			<label>Texte</label>
+				<input type="text" name="text" data-rule="is_string" data-require='true' />
+    		</p>
+			<p>
+    			<label>Number</label>
+				<input type="text" name="number" data-rule="is_number" data-require='true' />
+    		</p>
+			<p>
+    			<label>Email</label>
+				<input type="text" name="email" data-rule="is_email" data-require='true' />
+    		</p>
+			<p>
+    			<label>Téléphone</label>
+				<input type="text" name="telephone" data-rule="is_telephone" data-require='true' />
+    		</p>
+			<p>
+    			<label>type custom non required</label>
+				<input type="text" name="custom"  data-require='false' />
+    		</p>
+			
+			<div id="top30">
+				<input type="submit" value="Valider" />
+			</div>
+			
+    	</form>
+    	
+		
+	
+		
+		
+    </body>
+</html>

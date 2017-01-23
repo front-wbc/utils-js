@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nom de projet</title>
+		<link rel="stylesheet" media="screen" href="css/utils.css">
+		<link rel="stylesheet" media="screen" href="css/style.css">
+		<link rel="stylesheet" media="screen" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" media="screen" href="css/flatpickr.min.css">
+		<script type="text/javascript" src="libs/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="libs/handlebars.js"></script>
+		<script type="text/javascript" src="../..//dist/utils.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var utils = new Utils({ debug : true });
+				
+				/*utils.events = { "click #btn" : 'trace' };
+				utils.trace = function(evt, self) {
+					utils.log(evt);
+					utils.log(self);
+				}
+				
+				utils.runEvents ();*/
+				
+				utils.addEvent("#btn", "click", "trace", { nom : "Said", prenom : 'Bensamdi' });
+				utils.trace = function(evt, self, profil) {
+					utils.log(profil);
+				}
+				utils.addEvent("#btn2", "click", "trace2", { email : "Said@gmail.com", message : 'message de test' });
+				utils.trace2 = function(evt, self, profil) {
+					utils.log(profil);
+				}
+				utils.TriggerEvent("#btn", "click");
+				// le bouton avec l'id #btn n'est plus cliquable
+			    utils.removeEvent("#btn");
+			   
+				
+				
+				
+				
+				
+				
+				
+			});
+			
+			
+		</script>
+		
+    </head>
+    <body>
+		<a href="#" id="btn">Bouton</a>
+		<div>
+			<a href="#" id="btn2">Bouton event 2</a>
+		</div>
+		
+		
+		
+    </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "title": "json-server updated",
+      "author": "typicodeUpdated",
+      "id": 1
+    },
+    {
+      "title": "Lorem Titre 02",
+      "author": "Said Bens",
+      "id": 2
+    },
+    {
+      "title": "title poste",
+      "author": "author poste",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

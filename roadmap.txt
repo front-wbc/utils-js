@@ -2,7 +2,7 @@
 - l'option debug
 - les fonction utilitaires comme is_String, ....
 - des fonctions pour les plugins come ( carousel, datepicker, slider );
-- gestion des events d'une façon aisée
+- gestion des events d'une façon aisée et structurer
 - gestion des erreurs
 - documentation
 - lien CDN

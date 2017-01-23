@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nom de projet</title>
+		<link rel="stylesheet" media="screen" href="css/utils.css">
+		<link rel="stylesheet" media="screen" href="css/style.css">
+		<link rel="stylesheet" media="screen" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" media="screen" href="css/flatpickr.min.css">
+		<script type="text/javascript" src="libs/jquery.min.js"></script>
+		<script type="text/javascript" src="libs/moment.js"></script>
+		<script type="text/javascript" src="libs/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="libs/flatpickr.min.js"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"> </script>
+		
+		<script type="text/x-handlebars-template" id="template">
+			<div class="entry">
+			  <h1>{{title}}</h1>
+			  <div class="body">
+			    {{body}}
+			  </div>
+			</div>
+		</script>
+		
+		<script type="text/javascript" src="libs/handlebars.js"></script>
+		<script type="text/javascript" src="http://127.0.0.1:8080/dist/utils.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var utils = new Utils({ debug : true });
+				//utils.log(["banane", "orange", 'pomme'], "table");
+				//utils.log(utils.convertDate("30/07/2015", "YYYY/MM/DD"));
+				/*var options_carousel = {
+					autoPlay : 3000,
+				    navigation : true,
+				    slideSpeed : 2000,
+				    pagination : false,
+				    singleItem : true,
+				    stopOnHover : true,
+				    navigationText : ['<img src="'+self.staticRoot+'images/btn_right.png" />','<img src="'+self.staticRoot+'images/btn_left.png" />'],
+				    mouseDrag : true,
+				    rewindNav : true
+				};
+				utils.addCarousel("#slider", options_carousel);
+				utils.addDatePicker("#date_picker", "normal", options);*/
+				/*utils.events = { "click #btn" : 'trace' };
+				utils.trace = function(evt, self) {
+					utils.log(evt);
+					utils.log(self);
+				}
+				
+				utils.runEvents ();
+				
+				utils.addEvent("#btn", "click", "trace", { nom : "Said", prenom : 'Bensamdi' });
+				utils.trace = function(evt, self, profil) {
+					utils.log(profil.prenom);
+					console.log(evt);
+				}
+				utils.TriggerEvent("#btn", "click");
+				//utils.removeEvent("#btn");
+				
+				utils.is_custom = function(value) {
+					if( value.length > 20 ) {
+						return {
+							valid: true,
+							message: null
+						};
+					}
+					else {
+						return {
+							valid: true,
+							message: 'Merci de respecter les 20 caractéres'
+						};
+					}
+				}
+				var event_validate = utils.addCustomEvent("validationEmail", function(name) {
+					console.log("validationEmail - " + name);
+				});
+				utils.validate("#form", function(data) {
+					console.log("is valid");
+					event_validate();
+				});
+				
+				utils.createMaps("map", {lat : 29.54619, lng : -7.36133});
+				var marker_id2 = utils.addMarker({lat: 32.1112606, lng: -7.0245851}, 'Marker 02');
+				utils.addInfoWindow("hello marker 02", marker_id2);
+				utils.convertAdressToCords("Mosquée Hassan II, Casablanca, Maroc", function(result) {
+					var marker_id3 = utils.addMarker(result, 'Marker 0023');
+					utils.addInfoWindow("hello marker adresse", marker_id3);
+				});*/
+				
+				
+				//utils.renderTemplate({ templateURL : "templates/test.mst", data : { title : 'title of post', body : 'body of post' }, parent : '#post' });
+				
+				
+				
+				
+				
+			});
+			
+			
+		</script>
+		
+    </head>
+    <body>
+    	
+		<div id="post">
+			
+		</div>
+    	
+		<!--<div id="map" style="width:650px; height:500px;"></div>
+		
+		
+    	
+		<form id="form">
+    		<p>
+    			<label>Texte</label>
+				<input type="text" name="text" data-rule="is_string" data-require='true' />
+    		</p>
+			<p>
+    			<label>Number</label>
+				<input type="text" name="number" data-rule="is_number" data-require='true' />
+    		</p>
+			<p>
+    			<label>Email</label>
+				<input type="text" name="email" data-rule="is_email" data-require='true' />
+    		</p>
+			<p>
+    			<label>Téléphone</label>
+				<input type="text" name="telephone" data-rule="is_telephone" data-require='true' />
+    		</p>
+			<p>
+    			<label>type custom</label>
+				<input type="text" name="custom" data-rule="is_custom" data-require='true' />
+    		</p>
+			
+			<div id="top30">
+				<input type="submit" value="Valider" />
+			</div>
+			
+    	</form>-->
+    	
+		
+		<!--
+		<div class="top30 bottom30">
+			<input id="date_picker" type="text" />
+		</div>
+		<a href="#" id="btn">Bouton</a>
+		
+		<div id="slider" class="owl-carousel owl-theme">
+		  <div class="item"> Your Content </div>
+		  <div class="item"> Your Content </div>
+		  <div class="item"> Your Content </div>
+		  <div class="item"> Your Content </div>
+		  <div class="item"> Your Content </div>
+		  <div class="item"> Your Content </div>
+		  <div class="item"> Your Content </div>
+		</div>slider -->
+		
+		
+    </body>
+</html>

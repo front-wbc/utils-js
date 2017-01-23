@@ -1,0 +1,64 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol {margin:0;padding : 0;}
+a {text-decoration : none;}
+a img {border:none;}
+li {display:block;list-style : none;}
+body .clr, .centerAuto {clear : both;}
+/* form */
+.typeLabel label {display: block;position: absolute;z-index: 0;}
+.typeText label{display:block;width : 80px;float:left;margin-right : 5px;}
+form .error,form .errorlist {height : auto;}
+.error, .errorlist {background : #ffeaea;border : #ff9f9f solid 1px;color : #d50000;}
+.message {background : #f4fae2;color : #76951a;z-index:15;box-shadow : 3px 3px 5px #d6d6d6;top : 0;border : #d8ed96 solid 1px;}
+/* font */
+.arial {font-family : Arial, Helvetica, sans-serif;}
+.verdana {font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;}
+.bold {font-weight:bold;}
+.italic{font-style : italic;}
+.souligner{text-decoration : underline;}
+/* align */
+.alignCenter {text-align : center;}
+.alignJustify {text-align : justify;}
+.alignRight {text-align : right;}
+.uppercase {text-transform : uppercase;}
+/* layout */
+.container_12 {width : 960px;}
+.fluid{width:100%;}
+.fixedLayout,.message {position:fixed;}
+.absoluteLayout {position:absolute;}
+.relativeLayout {position:relative;}
+.colonne, .horizontal li, .horizontalDiv div, .half {float:left;}
+.centerAuto, .container_12{float:none;margin-left : auto;margin-right : auto;}
+.horizontal .right, .right {float:right;}
+.block, .horizontal, .clr {display:block;}
+.none {display : none;}
+.centerAuto, .container_12{float:none;margin-left : auto;margin-right : auto;}
+/* margin-top */
+.top5 {margin-top:5px;}
+.top10 {margin-top : 10px;}
+.top15 {margin-top : 15px;}
+.top20 {margin-top : 20px;}
+.top25 {margin-top : 25px;}
+.top30 {margin-top : 30px;}
+.top35 {margin-top : 35px;}
+/* margin-bottom */
+.bottom5 {margin-bottom:5px;}
+.bottom10 {margin-bottom : 10px;}
+.bottom15 {margin-bottom : 15px;}
+.bottom20 {margin-bottom : 20px;}
+.bottom25 {margin-bottom : 25px;}
+.bottom30 {margin-bottom : 30px;}
+.bottom35 {margin-bottom : 35px;}
+/* border-rdius*/
+.borderR5 {border-radius : 5px;}
+.borderR10 {border-radius : 10px;}
+/* box padding*/
+.box5, .boxLi5 li, .error, .errorlist {padding:5px;}
+.box10, .boxLi10 li {padding:10px;}
+.box15, .boxLi15 li {padding:15px;}
+.box20, .boxLi20 li {padding:20px;}
+.animate{
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari and Chrome */
+	-o-transition: all 0.5s; /* Opera */
+	-ms-transition: all 0.5s; /* Opera */
+}

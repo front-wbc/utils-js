@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nom de projet</title>
+		<link rel="stylesheet" media="screen" href="css/utils.css">
+		<link rel="stylesheet" media="screen" href="css/style.css">
+		<link rel="stylesheet" media="screen" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" media="screen" href="css/flatpickr.min.css">
+		<script type="text/javascript" src="libs/jquery.min.js"></script>
+		<script type="text/javascript" src="libs/moment.js"></script>
+		<script type="text/javascript" src="../..//dist/utils.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var utils = new Utils({ debug : true });
+				var new_date = utils.convertDate("30/07/2015", "YYYY/MM/DD");
+				$("#result").text(new_date);
+				
+				var new_date2 = utils.convertDate("30/07/2015", "DD MMMM,YYYY");
+				$("#result2").text(new_date2);
+				
+				
+			});
+			
+			
+		</script>
+		
+    </head>
+    <body>
+    	<div id="app">
+    		<ul>
+    			<li>date de départ : 30/07/2015</li>
+				<li>date converti : <span id="result"></span></li>
+				<li>date converti2 : <span id="result2"></span></li>
+    		</ul>
+    		
+			
+    	</div>
+    </body>
+</html>

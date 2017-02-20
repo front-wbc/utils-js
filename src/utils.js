@@ -408,7 +408,7 @@ class Utils {
 		var nbr_input = $(options.parent).find("input[data-require='true']").length;
 		var test_passe = [];
 		for( var i = 0; i < nbr_input; i++ ) {
-			var input = $(options.parent).find("input[name]").eq(i);
+			var input = $(options.parent).find("input[data-require='true']").eq(i);
 			var required = $(input).data("require");
 			var rule = $(input).data("rule");
 			var value = $(input).val();
@@ -745,6 +745,10 @@ class Utils {
 				}	
 			}
 	  });
+	}
+	
+	message (parent, message, type) {
+		this.log(parent+","+message+", "+type);
 	}
 	
 	

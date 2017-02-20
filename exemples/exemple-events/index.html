@@ -12,16 +12,20 @@
 		<script type="text/javascript" src="libs/jquery.min.js"></script>
 		
 		<script type="text/javascript" src="libs/handlebars.js"></script>
-		<script type="text/javascript" src="../..//dist/utils.js"></script>
+		<script type="text/javascript" src="../../dist/utils.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				var utils = new Utils({ debug : true });
 				
-				/*utils.events = { "click #btn" : 'trace' };
+				/*utils.events = { "click #btn" : 'trace', 'click #btn2' : 'trace2' };
 				utils.trace = function(evt, self) {
 					utils.log(evt);
 					utils.log(self);
+					return new _date;
 				}
+				utils.trace2 = function(evt,self) {
+					var new_date = self.trace();
+			    }
 				
 				utils.runEvents ();*/
 				
